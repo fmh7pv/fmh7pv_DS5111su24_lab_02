@@ -1,4 +1,9 @@
 erDiagram
+    COURSE_ASSIGNMENT ||--o{ COURSES : assigns
+    COURSE_ASSIGNMENT ||--o{ INSTRUCTORS : assigned_to
+    COURSE_ASSIGNMENT ||--o{ LEARNING_OUTCOMES : includes
+    COURSES ||--o{ LEARNING_OUTCOMES : defines
+
     COURSE_ASSIGNMENT {
         int assignment_id PK
         int course_id FK
@@ -23,5 +28,4 @@ erDiagram
         string learning_outcome
         boolean active
     }
-
 
