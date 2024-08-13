@@ -1,0 +1,27 @@
+erDiagram
+    COURSE_ASSIGNMENT {
+        int assignment_id PK
+        int course_id FK
+        string term
+        int instructor_id FK
+    }
+    COURSES {
+        int course_id PK
+        string mnemonic
+        string course_name
+        string course_desc
+        boolean active
+    }
+    INSTRUCTORS {
+        int instructor_id PK
+        string instructor_name
+        boolean active
+    }
+    LEARNING_OUTCOMES {
+        int outcome_id PK
+        int course_id FK
+        string learning_outcome
+        boolean active
+    }
+
+
